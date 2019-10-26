@@ -10,7 +10,11 @@ document.getElementById('login-form').addEventListener("submit" , (e)=>{
       			fetch(`http://localhost:4000/user&Username=${username.value}`)
       				.then(res=>res.json())
       				.then(res => {
-      					console.log(res[0]);
+      					if(res[0].password !== password.value) {
+      						alert('Wrong Credentials');
+      					} else {
+      						alert('Login success!');
+      					}
       				})
       				.catch(err => {
       					console.error(err);
