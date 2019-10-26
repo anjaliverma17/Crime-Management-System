@@ -6,53 +6,6 @@
   <link rel="dns-prefetch" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css?family=Raleway:300,400,600" rel="stylesheet" type="text/css">
 <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
-<script type="text/javascript">
-function validform() {
-
-        var a = document.getElementById("full_name");
-        var b = document.getElementById("email_address");
-        var c = document.getElementById("user_name");
-        var d = document.getElementById("phone_number");
-        var e = document.getElementById("description");
-        var f = document.getElementById("add_number");
-
-        if (a.value==null || a.value=="")
-        {
-            alert("Please Enter Your Full Name");
-            return false;
-        }
-        else if (b.value==null || b.value=="")
-        {
-            alert("Please Enter Your Email Address");
-            return false;
-        }
-        else if (c.value==null || c.value=="")
-        {
-            alert("Please Enter Your Username");
-            return false;
-        }
-        else if (d.value==null || d.value=="")
-        {
-            alert("Please Enter Your Present Address");
-            return false;
-        }
-        else if (e.value==null || e.value=="")
-        {
-            alert("Please Enter Your Description");
-            return false;
-        }
-
-        else if (e.value==null || e.value=="")
-        {
-            alert("Please Enter Your Adhar Number");
-            return false;
-        }
-        else {
-            true;
-        }
-
-    }
-</script>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
 
     
@@ -67,7 +20,7 @@ function validform() {
                     <div class="card">
                         <div class="card-header">Register an FIR</div>
                         <div class="card-body">
-                            <form name="my-form" onsubmit="return validform()" action="success.html" method="">
+                            <form name="my-form" id="complaint-form" method="">
                                 <div class="form-group row">
                                     <label for="full_name" class="col-md-4 col-form-label text-md-right">Full Name</label>
                                     <div class="col-md-6">
@@ -112,7 +65,7 @@ function validform() {
 
                                 <div class="form-group row">
                                     <label for="add_number" class="col-md-4 col-form-label text-md-right"><abbr
-                                                title="Adhar Card">Adhar Card No</abbr> Number</label>
+                                                title="Adhar Card">Aadhar Card No</abbr> </label>
                                     <div class="col-md-6">
                                         <input type="text" id="add_number" class="form-control" name="add-number">
                                     </div>
@@ -130,5 +83,6 @@ function validform() {
             </div>
         </div>
     </div>
+    <script type="text/javascript" src="app.js"></script>
 </body>
 </html>
