@@ -7,7 +7,14 @@ document.getElementById('login-form').addEventListener("submit" , (e)=>{
       			alert("No blank values allowed");
       		}
       		else {
-      			alert('Wrong credentials');
+      			fetch(`http://localhost:4000/user&Username=${username.value}`)
+      				.then(res=>res.json())
+      				.then(res => {
+      					console.log(res[0]);
+      				})
+      				.catch(err => {
+      					console.error(err);
+      				})
       		}	
 });
 
